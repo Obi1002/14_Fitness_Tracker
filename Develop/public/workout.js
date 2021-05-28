@@ -5,10 +5,14 @@ async function initWorkout() {
     document
       .querySelector("a[href='/exercise?']")
       .setAttribute("href", `/exercise?id=${lastWorkout._id}`);
+        // data.exercises.aggregate([{$addFields: {totalDuration:{$sum: "$duration"}}}])
+        // data.totalDuration=data.exercises.reduce((a,b)=>a+b)
+        let totalDuration=0
+        lastWorkout.exercises.forEach((exercise)=>totalDuration=totalDuration+exercise.duration)
 
     const workoutSummary = {
       date: formatDate(lastWorkout.day),
-      totalDuration: lastWorkout.totalDuration,
+      totalDuration: totalDuration,
       numExercises: lastWorkout.exercises.length,
       ...tallyExercises(lastWorkout.exercises)
     };

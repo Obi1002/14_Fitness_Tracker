@@ -3,7 +3,9 @@ const { Workout } = require("../models");
 
 router.get("/api/workouts", (req, res) => {
     Workout.find()
-        .then(data => res.status(200).json(data))
+        .then(data =>{         
+        
+        return res.status(200).json(data)})
         .catch(err => res.status(404).json(err))
 });
 
