@@ -36,9 +36,9 @@ MIT
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sdca/advdv)
 
 # Deployment
-[Link]()
+[Link](https://fitnesstracker-obi.herokuapp.com/)
 
 Add screenShot
 # Preview of the App
 * This is how the app looks
-![NoteTakingApp Screenshot]()
+![NoteTakingApp Screenshot](./Fitness.PNG)
